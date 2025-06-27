@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="chat-app">
+    <header>
+      <h2>💬 Secure Chat App</h2>
+      <div id="username-display"></div>
+    </header>
+
+    <div id="chat-box"></div>
+
+    <div id="input-area">
+      <button id="emoji-toggle">😀</button>
+      <div id="emoji-picker" class="hidden"></div>
+      <textarea id="message-input" placeholder="Type a message..." rows="1"></textarea>
+      <button id="send-btn">➤</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  <script src="{{ url_for('static', filename='emoji-picker.js') }}"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
